@@ -1,0 +1,26 @@
+'''
+Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+ '''
+ 
+ class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        for i in range(len(nums)):
+            nums[i]=nums[i]**2
+        
+        result=[0]*len(nums)
+        i=0
+        j=len(nums)-1
+        pos=-1
+        while i<=j:
+            if nums[i]<nums[j]:
+                result[pos]=nums[j]
+                j-=1
+            else:
+                result[pos]=nums[i]
+                i+=1
+            pos-=1
+        
+        print(result)
+        return result
+        
