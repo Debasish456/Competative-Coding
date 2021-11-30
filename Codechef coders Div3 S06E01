@@ -1,0 +1,8 @@
+for i in range(int(input())):
+    n=int(input())
+    if n<6:
+        print("NO")
+    elif n<21:
+        print("NO")
+    else:
+        print("YES")
