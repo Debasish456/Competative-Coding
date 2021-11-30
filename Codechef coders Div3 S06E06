@@ -1,0 +1,18 @@
+import numpy
+for i in range(int(input())):
+    n,k=input().split()
+    k=int(k)
+    l=[]
+    for i in n:
+        #print(int(i))
+        l.append(int(i))
+    #print(l)
+    for i in range(k):
+        l.sort()
+        if l[0]==9:
+            pass
+        else:
+            l[0]=l[0]+1
+            
+        
+    print(numpy.prod(l))
