@@ -1,0 +1,13 @@
+for i in range(int(input())):
+    a,b=input().split()
+    a,b=str(a),str(b)
+    a=a[::-1]
+    b=b[::-1]
+    a=int(a)
+    b=int(b)
+    ans=a+b
+    #print(a,b,ans)
+    ans=str(ans)
+    ans=ans[::-1]
+    ans=int(ans)
+    print(ans)
