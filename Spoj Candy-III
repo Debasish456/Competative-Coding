@@ -1,0 +1,13 @@
+for _ in range(int(input())):
+	k=input()
+	n=int(input())
+	l=[]
+	for i in range(n):
+		l.append(int(input()))
+	s=sum(l)
+	#print(s)
+	if s%n==0:
+		print("YES")
+	else:
+		print("NO")
+	
