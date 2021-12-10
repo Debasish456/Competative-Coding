@@ -1,0 +1,30 @@
+'''
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+ '''
+ 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        curr=head
+        l=0
+        while curr is not None:
+            curr=curr.next
+            l+=1
+        
+        n=l-n
+        i=0
+        if n==0:
+            head=head.next
+            return head
+        curr=head
+        while i<n-1:
+            curr=curr.next
+            i+=1
+        print(curr.val)
+        curr.next=curr.next.next
+        return head
